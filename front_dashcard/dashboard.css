@@ -1,0 +1,32 @@
+body{
+    background-color: orange;
+}
+.button1{
+    background-color: orange;
+    border: 0px;
+}
+#nomeAgente{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: -10;
+}
+#sucessoTransacao{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: -10;
+}
+#fraudeTransacao{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: -10;
+}
+#falhaTransacao{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: -10;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="dashboard.js"></script>
+    <link href="dashboard.css" rel="stylesheet">
+    <title>.:Dashboard:.</title>
+</head>
+<body onload="carregaDash()">
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <h2>Dashcard System</h2>
+            </div>
+            <div class="col-2">
+                <button type="button" onclick="logout()" class="button1"><img src="logout.png"></button>            
+            </div>
+        </div><hr>
+
+        <div class="row">
+            <fieldset>
+            <legend><b>Agente Parceiro</b></legend><br>            
+            <div class="col-12" id="nomeAgente" style="text-align:right" ></div>
+            </fieldset>
+        </div><br>
+        <div class="row">
+            <fieldset>
+                <legend><b>Sucessos em Transações</b></legend><br>            
+                <div class="col-12" id="sucessoTransacao" style="text-align:right" ></div>
+                
+            </div></fieldset><br>
+        <div class="row">
+            <fieldset>
+                <legend><b>Falhas em Transações</b></legend><br>            
+                <div class="col-12" id="falhaTransacao" style="text-align:right" ></div>
+                
+            </div></fieldset><br>
+        <div class="row">
+            <fieldset>
+                <legend><b>Fraudes em Transações</b></legend><br>            
+                <div class="col-12" id="fraudeTransacao" style="text-align:right" ></div>
+                
+            </div></fieldset><br>
+       
+
+    </div>
+
+    <canvas id="meuGrafico" width="100%"></canvas>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

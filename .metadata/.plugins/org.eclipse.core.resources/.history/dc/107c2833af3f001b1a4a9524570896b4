@@ -1,0 +1,23 @@
+package br.com.carloscorp.dashcard.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.carloscorp.dashcard.dao.AgenteFinanceiroDAO;
+import br.com.carloscorp.dashcard.model.AgenteFinanceiro;
+
+@RestController
+public class AgenteFinanceiroController {
+	
+	@Autowired
+	private AgenteFinanceiroDAO dao;
+	
+	public ArrayList<AgenteFinanceiro> rescuperarTodos(){
+		ArrayList <AgenteFinanceiro> lista;
+		lista = dao.findAllByOrderByVolumeDesc();
+		return lista;
+	}	
+
+}

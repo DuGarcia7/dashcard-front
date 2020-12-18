@@ -1,0 +1,17 @@
+package br.com.carloscorp.dashcard.dao;
+
+import java.util.ArrayList;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.carloscorp.dashcard.dto.ConsolidadoStatus;
+import br.com.carloscorp.dashcard.model.Transacao;
+
+public interface TransacaoDAO extends CrudRepository<Transacao, Integer> {
+	
+	//estou fazendo aqui pq minha fonte de dados principal é a de transações
+	@Query(value = "", nativeQuery = true)
+	public ArrayList<ConsolidadoStatus> recuperarStatus();
+	
+}

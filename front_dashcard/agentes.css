@@ -1,0 +1,14 @@
+.linhaPar{
+    background-color: rgb(255, 255, 255);
+}
+
+.linhaImpar{
+    background-color: rgb(212, 212, 212);
+}
+body{
+    background-color: orange;
+}
+.button1{
+    background-color: orange;
+    border: 0px;
+}

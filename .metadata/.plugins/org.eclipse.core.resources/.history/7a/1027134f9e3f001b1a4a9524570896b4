@@ -1,0 +1,40 @@
+package br.com.carloscorp.dashcard.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.carloscorp.dashcard.dao.UsuarioDAO;
+import br.com.carloscorp.dashcard.model.Usuario;
+
+@RestController
+public class UsuarioController {
+	
+	/* A anotação autowired realiza a injeção de dependência, isto é,
+	 * basicamente delegamos a instanciação do objeto para a mq virtual (em outras palavras, não precisamos dar NEW)
+	 */
+	
+	
+	@Autowired
+	UsuarioDAO dao;
+	
+	@GetMapping("/todos")
+	public ArrayList<Usuario> recuperarTodos(){
+		ArrayList<Usuario> lista;
+		lista = (ArrayList<Usuario>)dao.findAll();
+		return lista;		
+	}
+	
+	@GetMapping("/testeuser")
+	public String testandoUsuario() {
+		Usuario u = dao.findByEmailAndSenha("isidro@isidro.com", "1234");
+		if (u != null) {
+			return "Usuário encontrado = "+u.getNome();
+		}
+		else {
+			return "Usuário não encontrado";
+		}
+	}
+}

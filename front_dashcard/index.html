@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--copiar codigo do css no site do bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="index.js"></script>
+    <link href="index.css" rel="stylesheet">
+    <title>.: Sistema Dashcard :.</title>
+    
+
+</head>
+<body>
+    <div class="container"><!--ou container-fluid para retirar a margem-->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Sistema Dashcard</h2>
+            </div>
+        </div>
+
+        <!--formulario sem o <form> para não recarregar a pagina ao submeter-->
+        <!--alterar o nome dos campos abaixo conforme a base de dados-->
+        <div class="mb-3">
+            <label for="txtLogin" class="form-label">Email ou RACF</label>
+            <input type="text" class="form-control" id="txtLogin" aria-describedby="loginHelp">
+            <!--aria-describedby consegue ser lido por site de acessibilidade-->
+            <div id="loginHelp" class="form-text">Se atente às políticas de segurança do banco.</div>
+        </div>
+        <div class="mb-3">
+            <label for="txtSenha" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="txtSenha">
+        </div>
+        <button type="button" onclick="logar()" class="btn btn-primary">Enviar Dados</button>
+        
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 id="msgErro">...</h3>
+            </div>
+        </div>
+
+    </div>
+    
+    <!--copiar codigo do js no site do bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

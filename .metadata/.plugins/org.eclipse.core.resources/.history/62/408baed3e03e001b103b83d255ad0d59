@@ -1,0 +1,5 @@
+package br.com.carloscorp.hello.controller;
+
+public class HelloController {
+
+}

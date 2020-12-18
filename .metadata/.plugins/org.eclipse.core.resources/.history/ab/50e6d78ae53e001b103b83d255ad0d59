@@ -1,0 +1,5 @@
+package br.com.carloscorp.hello.model;
+
+public class Produto {
+
+}

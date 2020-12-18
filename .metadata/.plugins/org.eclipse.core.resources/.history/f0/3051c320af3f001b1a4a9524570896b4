@@ -1,0 +1,5 @@
+package br.com.carloscorp.dashcard.controller;
+
+public class AgenteFinanceiroController {
+
+}
